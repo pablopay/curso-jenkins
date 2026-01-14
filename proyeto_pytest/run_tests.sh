@@ -1,5 +1,6 @@
 #!/bin/bash
-
+echo "Setting up the test environment..."
+cd proyeto_pytest
 echo "Running tests with pytest..."
 source venv/bin/activate
 
