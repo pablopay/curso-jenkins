@@ -1,9 +1,14 @@
 #!/bin/bash
 echo "Running tests with pytest..."
+if [ ! -d "venv" ]; then
+    echo "Creating virtual environment..."
+    python3 -m venv venv
+fi
 source venv/bin/activate
 
 echo"installing dependencies..."
 
+pip install --upgrade pip
 pip install -r requirements.txt
 
 echo "Starting tests..."
